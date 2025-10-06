@@ -2,9 +2,22 @@ import { LitElement, html, css } from '../lib/lit.min.js';
 
 class KodiApp extends LitElement {
   static styles = css`
-    @import url('../../css/style.css');
-    :host { display: block; }
-    .container { display: flex; }
+    :host {
+      display: block;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+    }
+    kodi-aside {
+      flex: 0 0 200px; /* Fija el ancho del sidebar */
+    }
+    kodi-main {
+      flex: 1; /* Ocupa el resto del espacio */
+    }
   `;
   render() {
     return html`
