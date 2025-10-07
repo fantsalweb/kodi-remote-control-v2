@@ -1,4 +1,8 @@
-import { LitElement, html, css } from '../lib/lit.min.js';
+import { LitElement, html, css } from 'lit';
+// 💡 IMPORTAR LOS COMPONENTES HIJOS AQUÍ
+import './kodi-header.js'; 
+import './kodi-aside.js';
+import './kodi-main.js';
 
 class KodiApp extends LitElement {
   static styles = css`
@@ -13,10 +17,10 @@ class KodiApp extends LitElement {
       flex: 1;
     }
     kodi-aside {
-      flex: 0 0 200px; /* Fija el ancho del sidebar */
+      flex: 0 0 200px;
     }
     kodi-main {
-      flex: 1; /* Ocupa el resto del espacio */
+      flex: 1;
     }
   `;
   render() {
