@@ -75,6 +75,7 @@ class KodiMain extends LitElement {
               return html`<p>Selecciona una opción del menú.</p>`;
       }
   }
+  // Renderizado principal
   render() {
     return html`
       <main>

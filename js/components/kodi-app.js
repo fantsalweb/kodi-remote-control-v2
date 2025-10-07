@@ -1,8 +1,9 @@
 import { LitElement, html, css } from 'lit';
-// 💡 IMPORTAR LOS COMPONENTES HIJOS AQUÍ
+// 💡 IMPORTAR LOS COMPONENTES HIJOS AQUÍ (TODOS)
 import './kodi-header.js'; 
 import './kodi-aside.js';
 import './kodi-main.js';
+import './kodi-config.js';
 
 class KodiApp extends LitElement {
   static styles = css`
