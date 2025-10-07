@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '../lib/lit.min.js';
+import { LitElement, html, css } from 'lit';
 
 class KodiHeader extends LitElement {
   static styles = css`

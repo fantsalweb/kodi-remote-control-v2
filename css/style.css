@@ -1,4 +1,4 @@
-body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; height: 100%; background: #181818; color: #fff; }
+body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; height: 100%; overflow: hidden;}
 .app-container { display: flex; height: 100vh; }
 .sidebar { width: 200px; background: #111; padding: 20px; box-sizing: border-box; }
 .sidebar h2 { margin-top: 0; color: #1DB954; }
@@ -22,6 +22,7 @@ body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; height: 100%
 .status { margin-bottom: 10px; }
 input, button { margin: 5px 0; padding: 8px; width: 100%; box-sizing: border-box; }
 .error { color: red; }
+kodi-app { display: block; height: 100%; overflow: hidden; }
 #search-bar {
   margin: 10px 0;
   text-align: center;

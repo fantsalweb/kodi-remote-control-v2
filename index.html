@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Remote Control for Kodi</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Control for Kodi</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <kodi-app></kodi-app>
-  <script type="module" src="js/lib/lit.min.js"></script>
-  <script type="module" src="js/components/kodi-app.js"></script>
-  <script type="module" src="js/components/kodi-aside.js"></script>
-  <script type="module" src="js/components/kodi-header.js"></script>
-  <script type="module" src="js/components/kodi-main.js"></script>
+    <script type="module" src="/js/components/kodi-app.js"></script> 
+    
+    <script>
+        // 💡 CREAMOS Y AGREGAMOS EL COMPONENTE SOLO DESPUÉS DE QUE EL MÓDULO SE HAYA EJECUTADO
+        // Esto garantiza que la clase KodiApp ya está definida.
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = document.createElement('kodi-app');
+            document.body.prepend(app); // O document.body.appendChild(app);
+        });
+
+        // Tu escucha de eventos global
+        document.addEventListener('change-view', (e) => {
+            console.log('Global change-view received:', e.detail.view);
+        });
+    </script>
 </body>
 </html>
-
-
